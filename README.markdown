@@ -41,10 +41,11 @@ Alternatively, if you want the multiline in-place editor, use
 'jquery.rest_in_place_multiline.js' (there isn't a MooTools or Prototype version).
 You will probably also want to add something like this to your stylesheet to control
 the size of the TEXTAREA tag:
-.rest_in_place_multiline textarea {
-    height: 22em;
-    width: 400px;
-}
+
+     .rest_in_place_multiline textarea {
+         height: 22em;
+         width: 400px;
+     }
 
 For REST in Place to work with Rails request forgery protection, place the
 following lines into your applications layout:
