@@ -37,6 +37,15 @@ framework). `rest_in_place.js` is the version for the Prototype framework,
 `jquery.rest_in_place.js` uses the [jQuery][] framework and `mootools.rest_in_place.js`
 uses [mootools][].
 
+Alternatively, if you want the multiline in-place editor, use
+'jquery.rest_in_place_multiline.js' (there isn't a MooTools or Prototype version).
+You will probably also want to add something like this to your stylesheet to control
+the size of the TEXTAREA tag:
+.rest_in_place_multiline textarea {
+    height: 22em;
+    width: 400px;
+}
+
 For REST in Place to work with Rails request forgery protection, place the
 following lines into your applications layout:
 
@@ -54,6 +63,8 @@ follows:
         <span class="rest_in_place" url="/users/1" object="user" attribute="name">
           <%= @user.name %>
         </span>
+
+    For the multiline version use a class of "rest_in_place_multiline".
   
 -   if any of these attributes is missing, DOM parents of the element are searched
     for them. That means you can write something like:
